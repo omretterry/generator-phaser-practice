@@ -1,0 +1,9 @@
+{
+  "generator-node": {
+    "promptValues": {
+      "authorName": "omretterry",
+      "authorEmail": "omretterry@gmail.com",
+      "authorUrl": "omret.com"
+    }
+  }
+}
