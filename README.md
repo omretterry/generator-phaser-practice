@@ -17,3 +17,7 @@ $ npm install -g generator-phaser-practice
 ```bash
 $ yo phaser-practice:simple
 ```
+由于是静态页面，没有serve工具，生成项目使用时需要手动serve。建议使用```http-server```;
+```bash
+$ npm install -g http-server
+```
