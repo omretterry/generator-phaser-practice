@@ -17,7 +17,8 @@ $ npm install -g generator-phaser-practice
 ```bash
 $ yo phaser-practice:simple
 ```
-由于是静态页面，没有serve工具，生成项目使用时需要手动serve。建议使用```http-server```;
+由于是静态页面，没有serve工具，生成项目使用时需要手动serve。建议使用```live-server```;
 ```bash
-$ npm install -g http-server
+$ npm install -g live-server
 ```
+```live-server```文件文件变化是会自动重新刷新
