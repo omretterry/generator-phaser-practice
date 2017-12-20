@@ -21,4 +21,4 @@ $ yo phaser-practice:simple
 ```bash
 $ npm install -g live-server
 ```
-```live-server```文件文件变化是会自动重新刷新
+```live-server```当文件变化时会自动重新刷新
