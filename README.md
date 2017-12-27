@@ -30,6 +30,38 @@ $ yo phaser-practice
 1. Build. 点击vscode菜单栏`任务`，点击 `运行生成任务` 或者 使用快捷键 windows默认为 `Ctrl + Shift + B`
 2. Server. `cd bin;live-server`
 
+##### 目录结构
+```bash
+│  package.json
+│  tsconfig.json
+│
+├─.vscode
+│      tasks.json
+│
+├─bin
+│  │  index.html
+│  │
+│  ├─assets
+│  │      angry.png
+│  │      happy.png
+│  │
+│  └─js
+│          phaser.min.js
+│
+├─defs
+│      p2.d.ts
+│      phaser.d.ts
+│      pixi.d.ts
+│
+└─src
+        game.ts
+```
+* `defs` 为phaser定义文件，用于vscode中使用编写phaser项目时使用代码提示
+* `src` ts 文件所在的项目路径
+* `bin` 项目最终输出的，能够运行的文件夹
+* `.vscode` vscode项目配置文件。`tasks.json` 为使用vscode task所需的配置文件
+* `package.json` npm命令所需的配置文件
+* `tsconfig.json` typescript tsc命令所需的配置文件
 
 #### 生成JavaScript的练习项目
 创建一个基于javascript最简单的练习用项目，没有任何的构建工具，没有State。
