@@ -12,7 +12,9 @@ $ npm install -g yo
 $ npm install -g generator-phaser-practice
 ```
 
-#### 生成最简单的练习项目
+#### 生成TypeScript的练习项目
+
+#### 生成JavaScript的练习项目
 创建一个最简单的练习用的项目，没有任何的构建工具，没有State。
 ```bash
 $ yo phaser-practice:simple
