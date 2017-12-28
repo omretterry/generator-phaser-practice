@@ -1,3 +1,5 @@
+/// <reference path='../defs/phaser.d.ts' />
+
 class SimpleGame {
 	game: Phaser.Game;
 	happy;
