@@ -16,50 +16,26 @@ module.exports = class extends Generator {
   }
 
   writing() {
-    let dirList = ['.vscode/', 'bin/', 'bin/assets/', 'bin/js/', 'defs/', 'src/'];
-
-    // The part of make directories
-    dirList.forEach(dir => {
-      mkdirp(dir);
+    this.fs.copyTpl(this.templatePath('index.html'), this.destinationPath('index.html'), {
+      title: this.proName
     });
 
-    this.fs.copyTpl(
-      this.templatePath('bin/index.html'),
-      this.destinationPath('bin/index.html'),
-      {
-        title: this.proName
-      }
-    );
-    this.fs.copyTpl(
-      this.templatePath('package.json'),
-      this.destinationPath('package.json'),
-      {
-        title: this.proName
-      }
+    mkdirp('img/');
+    mkdirp('js/');
+
+    this.fs.copy(
+      this.templatePath('js/phaser.min.js'),
+      this.destinationPath('js/phaser.min.js')
     );
 
-    let pathList = [
-      '.vscode/tasks.json',
-      'bin/assets/happy.png',
-      'bin/assets/angry.png',
-      'bin/js/phaser.min.js',
-      'defs/p2.d.ts',
-      'defs/phaser.d.ts',
-      'defs/pixi.d.ts',
-      'src/game.ts',
-      'tsconfig.json'
-    ];
+    this.fs.copy(
+      this.templatePath('img/angry.png'),
+      this.destinationPath('img/angry.png')
+    );
 
-    pathList.forEach(path => {
-      this.fs.copy(this.templatePath(path), this.destinationPath(path));
-    });
-  }
-
-  install() {
-    this.installDependencies({
-      npm: true,
-      bower: false,
-      yarn: false
-    });
+    this.fs.copy(
+      this.templatePath('img/happy.png'),
+      this.destinationPath('img/happy.png')
+    );
   }
 };
