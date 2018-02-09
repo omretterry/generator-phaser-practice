@@ -20,10 +20,18 @@ $ npm install -g live-server
 ```live-server```当文件变化时会自动重新刷新
 
 #### 生成JavaScript的练习项目
-创建一个基于javascript最简单的练习用项目，没有任何的构建工具，没有State。
+* 创建一个基于javascript最简单的练习用项目，没有任何的构建工具，没有State。
 ```bash
 $ yo phaser-practice
 ```
+
+* 创建一个基于javascript的练习用项目，带有State。
+```bash
+$ yo phaser-practice:state
+```
+
+##### 以下为 ts 部分
+*****
 
 #### 生成TypeScript的练习项目
 创建一个基于typescript最简单的练习用项目，没有自动构建工具，没有State。
